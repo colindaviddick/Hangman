@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Hangman": {
+      "commandName": "Project",
+      "workingDirectory": "C:\\Users\\User\\source\\repos\\Hangman\\Hangman"
+    }
+  }
+}
