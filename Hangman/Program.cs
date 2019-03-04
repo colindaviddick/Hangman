@@ -1,25 +1,25 @@
 ﻿using System;
 using System.Linq;
-using System.Threading;
 using System.Resources;
+using System.Threading;
 
 namespace Hangman
 {
     static class Program
     {
-        
-        static public string[] scoreArray = System.IO.File.ReadAllLines(@"C:\Users\User\source\repos\Hangman\Hangman\data\Scores.txt");
-        
+        // Rest of path if needed: C:\Users\User\source\repos\Hangman\Hangman\data\Scores.txt
+        static public string[] scoreArray = System.IO.File.ReadAllLines(@"data\Scores.txt");
+
         static public float wins = float.Parse(scoreArray[0]);
         static public float losses = float.Parse(scoreArray[1]);
 
-        
+
 
         static void Main(string[] args)
         {
             Hangman();
         }
-        
+
         static void Hangman()
         {
 
@@ -43,7 +43,7 @@ namespace Hangman
             Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-            Console.WriteLine("                You have won {0:F1}% of your games." , wins / (wins + losses) * 100);
+            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
             Console.WriteLine("                                        ");
             Console.WriteLine("                             ,____      ");
             Console.WriteLine("                             |    |     ");
@@ -76,7 +76,9 @@ namespace Hangman
 
             if (choice == '1')
             {
-                string[] words = System.IO.File.ReadAllLines(@"C:\Users\User\source\repos\Hangman\Hangman\data\Words.txt");
+
+                // Full path in case of problems: C:\Users\User\source\repos\Hangman\Hangman\data\Words.txt
+                string[] words = System.IO.File.ReadAllLines(@"data\Words.txt");
                 Random rnd = new Random();
                 int random = rnd.Next(0, 58105);
                 word = words[random];
@@ -91,7 +93,7 @@ namespace Hangman
                 Console.WriteLine("Player 1, enter a word between 3 and 10 characters.");
                 word = new string(Console.ReadLine().ToUpper());
                 customWord = true;
-                
+
             }
             else if (choice == '3')
             {
@@ -181,7 +183,7 @@ namespace Hangman
                     timer = 1000;
                     wins = 0;
                     losses = 0;
-                    System.IO.File.WriteAllLines(@"C:\Users\User\source\repos\Hangman\Hangman\data\Scores.txt", lifetimeScores);
+                    System.IO.File.WriteAllLines(@"data\Scores.txt", lifetimeScores);
                     Console.WriteLine("Score information deleted.");
                     Hangman();
                 }
@@ -441,7 +443,7 @@ namespace Hangman
                 {
                     Console.WriteLine("What? Plz no.");
                 }
-                
+
 
 
                 if (alphabet.Contains(charGuess))
@@ -476,9 +478,9 @@ namespace Hangman
                             Thread.Sleep(timer);
                             //Console.BackgroundColor = ConsoleColor.Green;
                             //Console.ForegroundColor = ConsoleColor.Black;
-                            if(!customWord)
+                            if (!customWord)
                             {
-                            wins++;
+                                wins++;
                             }
 
                             timer = 100;
@@ -486,7 +488,8 @@ namespace Hangman
 
                             lifetimeScores[0] = wins.ToString();
                             lifetimeScores[1] = losses.ToString();
-                            System.IO.File.WriteAllLines(@"C:\Users\User\source\repos\Hangman\Hangman\data\Scores.txt", lifetimeScores);
+                            // Rest of path again, just in case: C:\Users\User\source\repos\Hangman\Hangman\data\Scores.txt
+                            System.IO.File.WriteAllLines(@"data\Scores.txt", lifetimeScores);
 
 
                             Console.Clear();
@@ -735,12 +738,13 @@ namespace Hangman
                 losses++;
             }
             timer = 300;
-            
+
             #region Lose
 
             lifetimeScores[0] = wins.ToString();
             lifetimeScores[1] = losses.ToString();
-            System.IO.File.WriteAllLines(@"C:\Users\User\source\repos\Hangman\Hangman\data\Scores.txt", lifetimeScores);
+            // Rest of path again, just in case: C:\Users\User\source\repos\Hangman\Hangman\data\Scores.txt
+            System.IO.File.WriteAllLines(@"data\Scores.txt", lifetimeScores);
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
             Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
@@ -773,7 +777,7 @@ namespace Hangman
             }
             Console.WriteLine();
             Console.WriteLine();
-            
+
             Thread.Sleep(timer);
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
@@ -807,7 +811,7 @@ namespace Hangman
             }
             Console.WriteLine();
             Console.WriteLine();
-            
+
             Thread.Sleep(timer);
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
@@ -841,7 +845,7 @@ namespace Hangman
             }
             Console.WriteLine();
             Console.WriteLine();
-            
+
             Thread.Sleep(timer);
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
@@ -875,7 +879,7 @@ namespace Hangman
             }
             Console.WriteLine();
             Console.WriteLine();
-            
+
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
             Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
@@ -939,8 +943,8 @@ namespace Hangman
                 char letter = starArray[i];
                 Console.Write(" {0}", letter);
             }
-            
-            
+
+
             Thread.Sleep(timer);
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
@@ -974,7 +978,7 @@ namespace Hangman
             }
             Console.WriteLine();
             Console.WriteLine();
-            
+
             Thread.Sleep(timer);
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
@@ -1106,9 +1110,9 @@ namespace Hangman
                     loopFlag = true;
                 }
                 // DISPLAY ALPHABET
-                while(loopFlag)
+                while (loopFlag)
                 {
-                    while(alphabet[h] == '_' && h < 26)
+                    while (alphabet[h] == '_' && h < 26)
                     {
                         // Console.WriteLine("SKIPPED!");
                         ////////////////////////////////////////////////////Thread.Sleep(timer);
@@ -1127,32 +1131,32 @@ namespace Hangman
                     {
                         gameSolved = true;
                     }
-                    
+
                     // Get character from alphabet[] starting with a...
                     timer = 200;
-                    
+
                     //Console.Write(" {0}", letter);
                     // if the word contains the current letter of the alphabet...
 
                     if (word.Contains(letter))
                     {
-                        h++;    
+                        h++;
                         // Console.WriteLine("If word.Contains(alphabet)....");
                         // check every letter in the word, and change star array & alphabet
                         for (int k = 1; k <= word.Length; k++)
                         {
-                            if (answerArray[k-1] == letter)
+                            if (answerArray[k - 1] == letter)
                             {
-//                                timer = 2000;
-                                answerArray[k-1] = letter;
+                                //                                timer = 2000;
+                                answerArray[k - 1] = letter;
                                 starArray[k - 1] = answerArray[k - 1];
-                                alphabet[h-1] = '_';
+                                alphabet[h - 1] = '_';
                                 Thread.Sleep(timer);
-                           //     Console.WriteLine("test");
+                                //     Console.WriteLine("test");
                             }
 
                         }
-                        
+
                     }
                     else
                     {
@@ -1160,10 +1164,10 @@ namespace Hangman
                         h++;
                         // Console.WriteLine("INT h = {0}", h);
                     }
-                    loopFlag = false ;
+                    loopFlag = false;
                     // Console.ReadLine();
                 }
-                
+
             }
 
             Console.Clear();
@@ -1181,7 +1185,7 @@ namespace Hangman
             Console.WriteLine("");
             Console.WriteLine("");
             Console.Write("  ");
-            
+
 
             for (int i = 0; i < alphabet.Length; i++)
             {
