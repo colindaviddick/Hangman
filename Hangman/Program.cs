@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Linq;
-using System.Resources;
 using System.Threading;
 
 namespace Hangman
 {
     static class Program
     {
+
+
+
         // Rest of path if needed: C:\Users\User\source\repos\Hangman\Hangman\data\Scores.txt
         static public string[] scoreArray = System.IO.File.ReadAllLines(@"data\Scores.txt");
 
@@ -17,6 +19,7 @@ namespace Hangman
 
         static void Main(string[] args)
         {
+            Console.Title = "Hangman!";
             Hangman();
         }
 
