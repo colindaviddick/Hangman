@@ -4,7 +4,7 @@ using System.Threading;
 
 namespace Hangman
 {
-    static class Program
+    static class HangmanGame
     {
 
 
