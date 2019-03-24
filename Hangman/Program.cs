@@ -4,12 +4,11 @@ using System.Threading;
 
 namespace Hangman
 {
-    static class HangmanGame
+    static class Program
     {
 
-
-
         // Rest of path if needed: C:\Users\User\source\repos\Hangman\Hangman\data\Scores.txt
+
         static public string[] scoreArray = System.IO.File.ReadAllLines(@"data\Scores.txt");
 
         static public float wins = float.Parse(scoreArray[0]);
@@ -46,7 +45,14 @@ namespace Hangman
             Console.ForegroundColor = ConsoleColor.White;
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+            if (wins != 0 || losses != 0)
+            {
+                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+            }
+            else
+            {
+                Console.WriteLine();
+            }
             Console.WriteLine("                                        ");
             Console.WriteLine("                             ,____      ");
             Console.WriteLine("                             |    |     ");
@@ -229,7 +235,16 @@ namespace Hangman
                 {
                     Console.Clear();
                     Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                    Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+
+                    if (wins != 0 || losses != 0)
+                    {
+                        Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                    }
+
                     Console.WriteLine("                                        ");
                     Console.WriteLine("                             ,____      ");
                     Console.WriteLine("                             |    |     ");
@@ -256,7 +271,14 @@ namespace Hangman
                 {
                     Console.Clear();
                     Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                    Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                    if (wins != 0 || losses != 0)
+                    {
+                        Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                    }
                     Console.WriteLine("                                        ");
                     Console.WriteLine("                             ,____      ");
                     Console.WriteLine("                             |    |     ");
@@ -284,7 +306,14 @@ namespace Hangman
                 {
                     Console.Clear();
                     Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                    Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                    if (wins != 0 || losses != 0)
+                    {
+                        Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                    }
                     Console.WriteLine("                                        ");
                     Console.WriteLine("                             ,____      ");
                     Console.WriteLine("                             |    |     ");
@@ -311,7 +340,14 @@ namespace Hangman
                 {
                     Console.Clear();
                     Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                    Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                    if (wins != 0 || losses != 0)
+                    {
+                        Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                    }
                     Console.WriteLine("                                        ");
                     Console.WriteLine("                             ,____      ");
                     Console.WriteLine("                             |    |     ");
@@ -339,7 +375,7 @@ namespace Hangman
                 {
                     Console.Clear();
                     Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                    Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                    Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
                     Console.WriteLine("                                        ");
                     Console.WriteLine("                             ,____      ");
                     Console.WriteLine("                             |    |     ");
@@ -366,7 +402,7 @@ namespace Hangman
                 {
                     Console.Clear();
                     Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                    Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                    Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
                     Console.WriteLine("                                        ");
                     Console.WriteLine("                             ,____      ");
                     Console.WriteLine("                             |    |     ");
@@ -393,7 +429,7 @@ namespace Hangman
                 {
                     Console.Clear();
                     Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                    Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                    Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
                     Console.WriteLine("                                        ");
                     Console.WriteLine("                             ,____      ");
                     Console.WriteLine("                             |    |     ");
@@ -497,7 +533,14 @@ namespace Hangman
 
                             Console.Clear();
                             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                            if (wins != 0 || losses != 0)
+                            {
+                                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                            }
                             Console.WriteLine("                                        ");
                             Console.WriteLine("   ______________            ,____      ");
                             Console.WriteLine("  |              |                |     ");
@@ -515,7 +558,14 @@ namespace Hangman
 
                             Console.Clear();
                             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                            if (wins != 0 || losses != 0)
+                            {
+                                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                            }
                             Console.WriteLine("                                        ");
                             Console.WriteLine("   ______________            ,____      ");
                             Console.WriteLine("  |              |                |     ");
@@ -532,7 +582,14 @@ namespace Hangman
                             Thread.Sleep(timer);
                             Console.Clear();
                             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                            if (wins != 0 || losses != 0)
+                            {
+                                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                            }
                             Console.WriteLine("                                        ");
                             Console.WriteLine("   ______________            ,____      ");
                             Console.WriteLine("  |              |                |     ");
@@ -549,7 +606,14 @@ namespace Hangman
                             Thread.Sleep(timer);
                             Console.Clear();
                             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                            if (wins != 0 || losses != 0)
+                            {
+                                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                            }
                             Console.WriteLine("                                        ");
                             Console.WriteLine("   ______________            ,____      ");
                             Console.WriteLine("  |              |                |     ");
@@ -565,7 +629,14 @@ namespace Hangman
                             Console.WriteLine("The word was: {0}", word);
                             Console.Clear();
                             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                            if (wins != 0 || losses != 0)
+                            {
+                                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                            }
                             Console.WriteLine("                                        ");
                             Console.WriteLine("   ______________            ,____      ");
                             Console.WriteLine("  |              |                |     ");
@@ -583,7 +654,14 @@ namespace Hangman
 
                             Console.Clear();
                             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                            if (wins != 0 || losses != 0)
+                            {
+                                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                            }
                             Console.WriteLine("                                        ");
                             Console.WriteLine("   ______________            ,____      ");
                             Console.WriteLine("  |              |                |     ");
@@ -600,7 +678,14 @@ namespace Hangman
                             Thread.Sleep(timer);
                             Console.Clear();
                             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                            if (wins != 0 || losses != 0)
+                            {
+                                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                            }
                             Console.WriteLine("                                        ");
                             Console.WriteLine("   ______________            ,____      ");
                             Console.WriteLine("  |              |                |     ");
@@ -617,7 +702,14 @@ namespace Hangman
                             Thread.Sleep(timer);
                             Console.Clear();
                             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                            if (wins != 0 || losses != 0)
+                            {
+                                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                            }
                             Console.WriteLine("                                        ");
                             Console.WriteLine("   ______________            ,____      ");
                             Console.WriteLine("  |              |                |     ");
@@ -633,7 +725,14 @@ namespace Hangman
                             Console.WriteLine("The word was: {0}", word);
                             Console.Clear();
                             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                            if (wins != 0 || losses != 0)
+                            {
+                                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                            }
                             Console.WriteLine("                                        ");
                             Console.WriteLine("   ______________            ,____      ");
                             Console.WriteLine("  |              |                |     ");
@@ -651,7 +750,14 @@ namespace Hangman
 
                             Console.Clear();
                             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                            if (wins != 0 || losses != 0)
+                            {
+                                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                            }
                             Console.WriteLine("                                        ");
                             Console.WriteLine("   ______________            ,____      ");
                             Console.WriteLine("  |              |                |     ");
@@ -668,7 +774,14 @@ namespace Hangman
                             Thread.Sleep(timer);
                             Console.Clear();
                             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                            if (wins != 0 || losses != 0)
+                            {
+                                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                            }
                             Console.WriteLine("                                        ");
                             Console.WriteLine("   ______________            ,____      ");
                             Console.WriteLine("  |              |                |     ");
@@ -685,7 +798,14 @@ namespace Hangman
                             Thread.Sleep(timer);
                             Console.Clear();
                             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                            if (wins != 0 || losses != 0)
+                            {
+                                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                            }
+                            else
+                            {
+                                Console.WriteLine();
+                            }
                             Console.WriteLine("                                        ");
                             Console.WriteLine("   ______________            ,____      ");
                             Console.WriteLine("  |              |                |     ");
@@ -750,7 +870,14 @@ namespace Hangman
             System.IO.File.WriteAllLines(@"data\Scores.txt", lifetimeScores);
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+            if (wins != 0 || losses != 0)
+            {
+                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+            }
+            else
+            {
+                Console.WriteLine();
+            }
             Console.WriteLine("                                        ");
             Console.WriteLine("                             ,____      ");
             Console.WriteLine("                             |    |     ");
@@ -784,7 +911,14 @@ namespace Hangman
             Thread.Sleep(timer);
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+            if (wins != 0 || losses != 0)
+            {
+                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+            }
+            else
+            {
+                Console.WriteLine();
+            }
             Console.WriteLine("                                        ");
             Console.WriteLine("                             ,____      ");
             Console.WriteLine("                             |    |     ");
@@ -818,7 +952,14 @@ namespace Hangman
             Thread.Sleep(timer);
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+            if (wins != 0 || losses != 0)
+            {
+                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+            }
+            else
+            {
+                Console.WriteLine();
+            }
             Console.WriteLine("                                        ");
             Console.WriteLine("                             ,____      ");
             Console.WriteLine("                             |    |     ");
@@ -852,7 +993,14 @@ namespace Hangman
             Thread.Sleep(timer);
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+            if (wins != 0 || losses != 0)
+            {
+                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+            }
+            else
+            {
+                Console.WriteLine();
+            }
             Console.WriteLine("                                        ");
             Console.WriteLine("                             ,____      ");
             Console.WriteLine("                             |    |     ");
@@ -885,7 +1033,14 @@ namespace Hangman
 
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+            if (wins != 0 || losses != 0)
+            {
+                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+            }
+            else
+            {
+                Console.WriteLine();
+            }
             Console.WriteLine("                                        ");
             Console.WriteLine("                             ,____      ");
             Console.WriteLine("                             |    |     ");
@@ -918,7 +1073,14 @@ namespace Hangman
             Thread.Sleep(timer);
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+            if (wins != 0 || losses != 0)
+            {
+                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+            }
+            else
+            {
+                Console.WriteLine();
+            }
             Console.WriteLine("                                        ");
             Console.WriteLine("                             ,____      ");
             Console.WriteLine("                             |    |     ");
@@ -951,7 +1113,14 @@ namespace Hangman
             Thread.Sleep(timer);
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+            if (wins != 0 || losses != 0)
+            {
+                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+            }
+            else
+            {
+                Console.WriteLine();
+            }
             Console.WriteLine("                                        ");
             Console.WriteLine("                             ,____      ");
             Console.WriteLine("                             |    |     ");
@@ -985,7 +1154,14 @@ namespace Hangman
             Thread.Sleep(timer);
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+            if (wins != 0 || losses != 0)
+            {
+                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+            }
+            else
+            {
+                Console.WriteLine();
+            }
             Console.WriteLine("                                        ");
             Console.WriteLine("                             ,____      ");
             Console.WriteLine("                             |    |     ");
@@ -1066,7 +1242,14 @@ namespace Hangman
             {
                 Console.Clear();
                 Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+                if (wins != 0 || losses != 0)
+                {
+                    Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                }
+                else
+                {
+                    Console.WriteLine();
+                }
                 Console.WriteLine("                                        ");
                 Console.WriteLine("                             ,____      ");
                 Console.WriteLine("                             |    |     ");
@@ -1175,7 +1358,14 @@ namespace Hangman
 
             Console.Clear();
             Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-            Console.WriteLine("                You have won {0:F1}% of your games.", wins / (wins + losses) * 100);
+            if (wins != 0 || losses != 0)
+            {
+                Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+            }
+            else
+            {
+                Console.WriteLine();
+            }
             Console.WriteLine("                                        ");
             Console.WriteLine("                             ,____      ");
             Console.WriteLine("                             |    |     ");
