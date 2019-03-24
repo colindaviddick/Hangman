@@ -30,7 +30,7 @@ namespace Hangman
             // Start Conditions:
             int wordLength = 0;
             int lives = 7;
-            char choice = '0';
+            char choice = '1';
             bool gameSolved = false;
             Console.Clear();
             string word = "";
@@ -70,6 +70,8 @@ namespace Hangman
             Console.WriteLine();
             Console.WriteLine("Choosing your own word will clear saved wins & losses.");
             string stringChoice = Console.ReadLine();
+
+            // Figure out how to stop No entry crashing the app.
 
             try
             {
@@ -375,7 +377,14 @@ namespace Hangman
                 {
                     Console.Clear();
                     Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                    Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                    if (wins != 0 || losses != 0)
+                    {
+                        Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                    }
                     Console.WriteLine("                                        ");
                     Console.WriteLine("                             ,____      ");
                     Console.WriteLine("                             |    |     ");
@@ -402,7 +411,14 @@ namespace Hangman
                 {
                     Console.Clear();
                     Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                    Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                    if (wins != 0 || losses != 0)
+                    {
+                        Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                    }
                     Console.WriteLine("                                        ");
                     Console.WriteLine("                             ,____      ");
                     Console.WriteLine("                             |    |     ");
@@ -429,7 +445,14 @@ namespace Hangman
                 {
                     Console.Clear();
                     Console.WriteLine("  Wins: {0}                                           Losses: {1}", wins, losses);
-                    Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                    if (wins != 0 || losses != 0)
+                    {
+                        Console.WriteLine("                You have won {0:F0}% of your games.", wins / (wins + losses) * 100);
+                    }
+                    else
+                    {
+                        Console.WriteLine();
+                    }
                     Console.WriteLine("                                        ");
                     Console.WriteLine("                             ,____      ");
                     Console.WriteLine("                             |    |     ");
