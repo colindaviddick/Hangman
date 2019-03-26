@@ -30,7 +30,7 @@ namespace Hangman
             // Start Conditions:
             int wordLength = 0;
             int lives = 7;
-            char choice = '1';
+            char choice = '0';
             bool gameSolved = false;
             Console.Clear();
             string word = "";
@@ -77,11 +77,19 @@ namespace Hangman
             {
                 choice = Char.Parse(stringChoice);
             }
+            catch (FormatException)
+            {
+                Console.WriteLine("Error!");
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("What? Plz no.");
+            }
             catch (global::System.Exception)
             {
-
                 throw;
             }
+
 
             // If "1" is selected, create a randon word:
 

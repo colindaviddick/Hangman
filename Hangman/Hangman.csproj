@@ -12,6 +12,7 @@
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Platforms>AnyCPU;x64</Platforms>
+    <Configurations>Debug;Release;Hangman RC 1.0</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
